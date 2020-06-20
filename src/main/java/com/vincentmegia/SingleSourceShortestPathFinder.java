@@ -45,8 +45,18 @@ public class SingleSourceShortestPathFinder {
                     currentNode = entry.getKey();
                 }
             }
-            System.out.println(table);
         }
+        print(currentNode);
         return table;
+    }
+
+    /**
+     * Recurse until start = start
+     * @param node
+     */
+    public void print(Node node) {
+        System.out.println(node.getId());
+        if (node.equals(node.getSubscript())) return;
+        print(node.getSubscript());
     }
 }

@@ -27,6 +27,10 @@ public class Node {
         this.subscript = node;
     }
 
+    public Node getSubscript() {
+        return this.subscript;
+    }
+
     public int getCost(String key) {
         return costStore.get(key);
     }
